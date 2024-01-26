@@ -1,0 +1,209 @@
+@font-face {
+    font-family: "OutfitVariable";
+    src: url("/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "YoungSerif";
+    src: url("/assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+body {
+    background-color: hsl(30, 54%, 90%);
+    margin: 0;
+    /* height: 100vh; */
+    /* width: 100vw; */
+    display: flex;
+    flex-direction: column;
+    color: hsl(30, 10%, 34%);
+    font-family: "OutfitVariable";
+}
+
+.recipe-container {
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    max-width: 700px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.card-image {
+    padding: 30px 30px 0px 30px;
+}
+
+    .card-image img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+.card-body {
+    padding: 30px;
+    font-size: 16px;
+}   
+
+.card-title h1 {
+    font-family: "YoungSerif";
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.15;
+    font-size: 36px;
+    color: hsl(24, 5%, 18%);
+} 
+
+.card-title p {
+    line-height: 1.5;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+} 
+
+.card-prep-time {
+    padding: 30px;
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 20px;
+    color: hsl(30, 10%, 34%);
+}
+
+.card-prep-time h2 {
+    margin: 0;
+    color: hsl(332, 51%, 32%);
+}
+
+.card-prep-time ul {
+    margin-bottom: 0;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.card-prep-time ul li {
+    margin-top: 1em;
+    position: relative;
+    padding-left: 30px;
+    margin-left: 10px;
+}
+
+.card-prep-time ul li::before {
+    content:"•";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: hsl(332, 51%, 32%);
+}
+
+.card-prep-time ul li:first-of-type {
+    margin-top: 0;
+}
+
+.card-section {
+    padding: 2em 0;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+    .card-section h2 {
+        color: hsl(14, 45%, 36%);
+        font-family: "YoungSerif";
+        font-weight: 400;
+        margin-top: 0;
+    }
+
+    .card-section ul,
+    .card-section ol {
+        margin-bottom: 0;
+        list-style: none;
+        padding-inline-start: 0;
+    }
+    
+    .card-section ul li,
+    .card-section ol li {
+        margin-top: 1em;
+        line-height: 1.5;
+        position: relative;
+        padding-left: 30px;
+        margin-left: 10px;
+    }
+
+    .card-section ul li::before {
+        content:"•";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: hsl(14, 45%, 36%);
+    }
+
+    .card-section ol li::before {
+        content:""counter(list-item)".";
+        position: absolute;
+        left: 0;
+        font-size: 16px;
+        font-weight: 700
+        ;
+        color: hsl(14, 45%, 36%);
+    }
+    
+    .card-section ul li:first-of-type,
+    .card-section ol li:first-of-type {
+        margin-top: 0;
+    }
+
+.card-section:last-of-type {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.card-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.card-table tr {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.card-table tr:last-of-type {
+    border-bottom: 0;
+}
+
+.card-table tr td:first-of-type {
+    padding: 15px 10px 15px 20px;
+}
+
+.card-table tr td:last-of-type {
+    padding: 15px 20px 15px 10px;
+}
+
+.card-table tr td strong {
+    color: hsl(14, 45%, 36%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (max-width: 425px) {
+    .card {
+        border-radius: 0px;
+        margin-top: 0;
+    }
+
+    .card-image {
+        padding: 0px;
+    }
+
+    .card-image img {
+        border-radius: 0px;
+    }
+
+    .card-body {
+        padding: 30px;
+    }
+}
